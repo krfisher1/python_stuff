@@ -8,3 +8,5 @@ if user == 3:
     print("Why")
 if user > 3:
     print("okay")           
+
+print("This is a test")
