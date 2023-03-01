@@ -9,4 +9,3 @@ if user == 3:
 if user > 3:
     print("okay")           
 
-print("This is a test")
