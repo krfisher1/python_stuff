@@ -1,4 +1,6 @@
+
 #This is a review of programing one#
+
 ##This is a print statment: It just prints the string that you type out ##
 print("")
 #Data Types
@@ -52,7 +54,7 @@ if one and two or three:
 
 if not three:
     print("Three is true")
-    
+
 
 import random
 
@@ -60,6 +62,9 @@ import random
 
 print(random.randint(1,10))    
 
+while box < 100:
+    print("yikes")
+    box += 1
 
 #Math in python -> left hand side + right hand side #
     # math operators: +(add), -(subtraction), *(times), **(exponents), /(division), %(modulous) 
@@ -95,8 +100,8 @@ print(random.randint(1,10))
     #   random.randint(arguments(parameters))
 
 
+#this is a comment and doesn't get ran as code
 
-
-
+#loops run a group of code until a specific condition is met
 
 
