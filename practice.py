@@ -9,3 +9,32 @@ if user == 3:
 if user > 3:
     print("okay")           
 
+
+
+
+
+
+
+
+
+
+
+
+
+# March 15, 2023 condition/conditionals/while/for
+
+
+while True:
+    ip = input("I.P. Address(to exit enter e): ")
+    if ip == "e":
+        break
+    else:
+        print(ip) 
+
+
+
+# March 16 2023 for loop
+
+
+
+
