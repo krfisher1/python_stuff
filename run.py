@@ -1,7 +1,25 @@
-p1name = input("Enter your name: ")
-p1pos = str(input("Enter you position (x,y): "))
-p1rad = str(input("enter your personal space radius: "))
-x = p1pos.split(",")
+import random
+i = 0
+ele_in_same_room = 0
+zookeeper_in_same_room_as_both_ele = 0
+zookeeper_in_same_room_as_one_ele = 0
+zookeeper_in_neither_rooms = 0
+again = True
 
-print(x)
 
+
+
+while i in range(100000):
+    ele1 = random.randint(1,7)
+    ele2 = random.randint(1,7)
+    zookeeper = random.randint(1,7)
+    if zookeeper == ele1 and zookeeper == ele2:
+        zookeeper_in_same_room_as_both_ele += 1
+    else: 
+        zookeeper_in_same_room_as_one_ele
+
+
+    i += 1    
+ 
+print(zookeeper_in_same_room_as_both_ele) 
+print(zookeeper_in_same_room_as_one_ele)
