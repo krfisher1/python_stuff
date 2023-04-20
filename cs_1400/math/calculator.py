@@ -1,4 +1,7 @@
-import cs_1400.a_math as am
+import a_math as am
+
+
+ 
 '''from a_math import add 
 if you do this then you don't have to write am
 also use , to use more then one thing to imput '''
@@ -20,3 +23,28 @@ if do == "divide":
 
 
 print(am.constants["pi"])    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

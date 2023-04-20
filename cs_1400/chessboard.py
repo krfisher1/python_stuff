@@ -6,32 +6,71 @@ height = int(input("Enter the height: "))
 pos = start_positions.split(",")
 startX = int(pos[0])
 startY = int(pos[1])
+hoeb = height / 8
+woeb = width / 8
 
 
-def big_box():
 
-    height_of_each_box = height / 8
-    width_of_each_box = width / 8
 
-    turtle.penup()
-    turtle.goto(startX, startY) 
-    turtle.pendown()
-    turtle.forward(width)
-    turtle.right(90)
-    turtle.forward(height)
-    turtle.right(90)
-    turtle.forward(width)
-    turtle.right(90)
-    turtle.forward(height) 
-    turtle.done()
+turtle.penup()
+turtle.goto(startX, startY) 
+turtle.pendown()
+turtle.right(270)
+turtle.forward(width)
+turtle.right(270)
+turtle.forward(height)
+turtle.right(270)
+turtle.forward(width)
+turtle.right(270)
+turtle.forward(height) 
 
-def box_8():
-    turtle.penup()
-    turtle.goto(startX, startY)
-    turtle.done()
+    
+    
+turtle.penup()
+turtle.goto(startX, startY)
+turtle.right(270)
+turtle.pendown()
 
-big_box()
-box_8()
+box_count = 0
+while box_count <= 3:
+   
+    turtle.begin_fill()
+    turtle.forward(woeb)
+    turtle.right(270)
+    turtle.forward(hoeb)
+    turtle.right(270)
+    turtle.forward(woeb)
+    turtle.right(270)
+    turtle.forward(hoeb)
+    turtle.end_fill()
+    turtle.right(180)
+    turtle.forward(2 * woeb)
+    box_count += 1
+
+rows = 0
+while rows <= 3:
+
+    turtle.right(270)
+    turtle.forward(2 * hoeb)
+    box_count = 0
+    while box_count <= 3:
+   
+        turtle.begin_fill()
+        turtle.forward(hoeb)
+        turtle.right(270)
+        turtle.forward(woeb)
+        turtle.right(270)
+        turtle.forward(hoeb)
+        turtle.right(270)
+        turtle.forward(woeb)
+        turtle.end_fill()
+        turtle.right(270)
+        turtle.forward(2 * woeb)
+        box_count += 1
+
+turtle.done()
+
+
 
 
 

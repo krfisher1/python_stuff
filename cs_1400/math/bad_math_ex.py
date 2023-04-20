@@ -1,4 +1,6 @@
-import bad_math
+import bad_math 
+
+
 do = input("Do you want to add, subtract, multiply, divide ")
 first = int(input("Number one: "))
 sec = int(input("Number two: "))
