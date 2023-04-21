@@ -1,3 +1,4 @@
+#this code makes rectangles#
 def main():
     from random import randint 
     center = str(input("Enter in your center point: "))
