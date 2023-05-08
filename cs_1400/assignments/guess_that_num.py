@@ -6,7 +6,7 @@ again = "y"
 againcount = 0
 while again != "n":
     number = r.randint(1,101)
-    print(number)
+    
 
 
     

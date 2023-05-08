@@ -1,1 +1,1 @@
-Your scores are(from highest to lowest): [1]
+Your scores are(from highest to lowest): [1, 5]
