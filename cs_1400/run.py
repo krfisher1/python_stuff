@@ -62,6 +62,22 @@ turtle.goto(startX, startY)
 
 x_pos_max = width + startX
 y_pos_max = height + startY
+isSmile = input("True or false ")
+if isSmile == "true":  
+        turtle.penup()
+        turtle.goto(-60,60)
+        turtle.setheading(-60)
+        turtle.pendown()
+        turtle.circle(70,120)
+        turtle.penup()
+else:
+        turtle.penup()
+        turtle.goto(-60,60)
+        turtle.setheading(-60)
+        turtle.pendown()
+        turtle.setheading(-60)
+        turtle.circle(70,-180)
+        turtle.penup() 
 turtle.done()
 
 

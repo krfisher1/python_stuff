@@ -17,44 +17,47 @@ class Face:
     def isSmile(self):
         return self.__smile
     def isHappy(self):
-        return self.__happy 
+        return self.__happy    
     def isDarkEyes(self):
-        return self.__darkEyes       
-
-    def __drawHead(self):
-        if self.isHappy:
-                color = "yellow"
-        elif self.isHappy == False:
-                color = "red"
-        t.goto(0,0)
-        t.color(color)
-        t.begin_fill() 
-        t.pendown()
-        t.circle(100)
-        t.end_fill()
-        t.penup()
+        return self.__drawEyes
 
 
-    def __drawMouth(self): 
-        if self.isSmile:   
+    def __drawMouth():
+        if self.isHappy:   
             t.penup()
-            t.color("black")
-            t.goto(-60,60) 
-            t.pendown()
+            t.goto(-60,60)
             t.setheading(-60)
-            t.circle(70, 120)
-            t.penup()
-        else:
-            t.penup()
-            t.color("black")
-            t.goto(60,60)
-            t.setheading(120)
             t.pendown()
             t.circle(70,120)
-            t.penup() 
+            t.penup()
+        else:
+            t.penup()
+            t.goto(-60,60)
+            t.pendown()
+            t.setheading(-60)
+            t.circle(100,90) 
 
-    def __drawEyes(self):  
-        if self.isDarkEyes: 
+    def __drawHead():
+        if self.isSmile:
+            t.penup()
+            t.color("yellow")
+            t.begin_fill() 
+            t.pendown()
+            t.circle(100)
+            t.end_fill()
+            t.penup()
+        else:
+            t.penup()
+            t.goto(0,0)
+            t.color("red")
+            t.begin_fill() 
+            t.pendown()
+            t.circle(100)
+            t.penup()
+
+    def __drawEyes():        
+        if self.isDarkEyes:
+                
             t.penup()
             t.goto(-30,135)
             t.color("black")
@@ -78,7 +81,7 @@ class Face:
             t.color("blue")
             t.begin_fill() 
             t.pendown()
-            t.dot(25)
+            t.circle(15)
             t.end_fill()
             t.penup() 
 
@@ -86,29 +89,27 @@ class Face:
             t.color("blue")
             t.begin_fill() 
             t.pendown()
-            t.dot(25)
+            t.circle(15)
             t.end_fill()
             t.penup()
-                            
+                         
 
 
-
-
-
-
-
-
-
-
-
-
+    def changeMouth(self):
+        return self.__drawMouth
+    def changeEmotion(self):
+        return self.__drawHead    
+    def changeEyes(self):
+        return self.__drawEyes
 
 def main():
     face = Face()
     done = False
 
+
+
+
     while not done:
-        face.draw_face()
         print("Change My Face")
         mouth = "frown" if face.isSmile else "smile"
         emotion = "angry" if face.isHappy else "happy"
@@ -120,30 +121,21 @@ def main():
 
         menu = eval(input("Enter a selection: "))
 
-        
+        face.draw_face()
         if menu == 1:
-            if face.isSmile:
-                face.isSmile = False
-            elif face.isSmile == False:
-                face.isSmile = True    
-               
+
+                face.changeMouth()    
         elif menu == 2:
-            if face.isHappy:
-                face.isHappy = False
-            elif face.isHappy == False:
-                face.isHappy = True 
-            
+
+                face.changeEmotion() 
             
         elif menu == 3:
-            if face.isDarkEyes:
-                face.isDarkEyes = False
-            elif face.isDarkEyes == False:
-                face.isDarkEyes = True 
-                       
+
+                face.changeEyes()             
+            
         else:
             break
 
-        
     print("Thanks for Playing")
 
     t.hideturtle()
@@ -151,14 +143,3 @@ def main():
 
 
 main()
-
-
-
-
-
-
-
-
-
-
-
