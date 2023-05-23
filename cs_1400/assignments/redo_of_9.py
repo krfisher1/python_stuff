@@ -1,15 +1,13 @@
 
-import turtle as t
-
-
+import turtle
 class Face:
     def __init__(self):
         self.__smile = True
         self.__happy = True
         self.__darkEyes = True
-
+        
     def draw_face(self):
-        t.clear()
+        turtle.clear()
         self.__drawHead()
         self.__drawEyes()
         self.__drawMouth()
@@ -17,129 +15,48 @@ class Face:
     def isSmile(self):
         return self.__smile
     def isHappy(self):
-        return self.__happy    
+        return self.__happy
     def isDarkEyes(self):
-        return self.__drawEyes
-
-
-    def __drawMouth():
-        if self.isHappy:   
-            t.penup()
-            t.goto(-60,60)
-            t.setheading(-60)
-            t.pendown()
-            t.circle(70,120)
-            t.penup()
-        else:
-            t.penup()
-            t.goto(-60,60)
-            t.pendown()
-            t.setheading(-60)
-            t.circle(100,90) 
-
-    def __drawHead():
-        if self.isSmile:
-            t.penup()
-            t.color("yellow")
-            t.begin_fill() 
-            t.pendown()
-            t.circle(100)
-            t.end_fill()
-            t.penup()
-        else:
-            t.penup()
-            t.goto(0,0)
-            t.color("red")
-            t.begin_fill() 
-            t.pendown()
-            t.circle(100)
-            t.penup()
-
-    def __drawEyes():        
-        if self.isDarkEyes:
-                
-            t.penup()
-            t.goto(-30,135)
-            t.color("black")
-            t.begin_fill() 
-            t.pendown()
-            t.dot(25)
-            t.end_fill()
-            t.penup() 
-
-            t.goto(30,135)
-            t.color("black")
-            t.begin_fill() 
-            t.pendown()
-            t.dot(25)
-            t.end_fill()
-            t.penup() 
-
-        else:
-            t.penup()
-            t.goto(-30,135)
-            t.color("blue")
-            t.begin_fill() 
-            t.pendown()
-            t.circle(15)
-            t.end_fill()
-            t.penup() 
-
-            t.goto(30,135)
-            t.color("blue")
-            t.begin_fill() 
-            t.pendown()
-            t.circle(15)
-            t.end_fill()
-            t.penup()
-                         
-
+        return self.__darkEyes
 
     def changeMouth(self):
-        return self.__drawMouth
+        if self.isSmile:
+            drawHead
+        else:
+            
+    self.draw_face()
     def changeEmotion(self):
-        return self.__drawHead    
+<Fill-In>
+        self.draw_face()
     def changeEyes(self):
-        return self.__drawEyes
-
+<Fill-In>
+        self.draw_face()
 def main():
-    face = Face()
+    face = <Fill-In>
+    face.<Fill-In>
     done = False
-
-
-
-
     while not done:
         print("Change My Face")
-        mouth = "frown" if face.isSmile else "smile"
-        emotion = "angry" if face.isHappy else "happy"
-        eyes = "blue" if face.isDarkEyes else "black"
+        mouth = "frown" <Fill-In> "smile"
+        emotion = "angry" <Fill-In> "happy"
+        eyes = "blue" <Fill-In> "black"
         print("1) Make me", mouth)
         print("2) Make me", emotion)
         print("3) Make my eyes", eyes)
         print("0) Quit")
-
         menu = eval(input("Enter a selection: "))
-
-        face.draw_face()
         if menu == 1:
-
-                face.changeMouth()    
+            if isSmile:
+                isSmile = False
+            elif isSmile == False:
+                isSmile = True
         elif menu == 2:
-
-                face.changeEmotion() 
-            
+<Fill-In>
         elif menu == 3:
-
-                face.changeEyes()             
-            
+<Fill-In>
         else:
             break
-
-    print("Thanks for Playing")
-
-    t.hideturtle()
-    t.done()
-
-
+print("Thanks for Playing")
+turtle.hideturtle()
+turtle.done()
 main()

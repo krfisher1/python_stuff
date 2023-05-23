@@ -24,10 +24,19 @@ class Face:
     def __drawHead(self):
         if self.isHappy:
                 color = "yellow"
+
+
+                
         elif self.isHappy == False:
                 color = "red"
-        t.goto(0,0)
+                t.goto(0,0)
+                
+                
+                
+        
+
         t.color(color)
+
         t.begin_fill() 
         t.pendown()
         t.circle(100)
@@ -39,6 +48,7 @@ class Face:
         if self.isSmile:   
             t.penup()
             t.color("black")
+            t.width(8)
             t.goto(-60,60) 
             t.pendown()
             t.setheading(-60)
@@ -47,6 +57,7 @@ class Face:
         else:
             t.penup()
             t.color("black")
+            t.width(8)
             t.goto(60,60)
             t.setheading(120)
             t.pendown()
@@ -93,20 +104,13 @@ class Face:
 
 
 
-
-
-
-
-
-
-
-
+#Didn't have enough time to finish assignment so next I would figure out why the smile keeps moving even though I have it starting at 0,0 each time#
 
 
 def main():
     face = Face()
     done = False
-
+    loopcount = 0 
     while not done:
         face.draw_face()
         print("Change My Face")
@@ -120,7 +124,6 @@ def main():
 
         menu = eval(input("Enter a selection: "))
 
-        
         if menu == 1:
             if face.isSmile:
                 face.isSmile = False
